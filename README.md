@@ -1,4 +1,4 @@
-#This Fork adds a GUI
+# This Fork adds a GUI
 
 # Virgo: A Versatile Spectrometer for Radio Astronomy
 <p align="center">
