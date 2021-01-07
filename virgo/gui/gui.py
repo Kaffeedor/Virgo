@@ -1,4 +1,4 @@
-import virgo
+    import virgo
 import tkinter as tk
 
 while 1:
@@ -8,13 +8,13 @@ while 1:
 
 def onPlay():
     durationvar = duration.get()
-    frequencyvar = float(frequency.get())
-    bandwidthvar = float(bandwidth.get())
-    channelsvar = int(channels.get())
-    t_samplevar = float(t_sample.get())
-    rf_gainvar = float(rf_gain.get())
-    if_gainvar = float(if_gain.get())
-    bb_gainvar = float(bb_gain.get())
+    frequencyvar = frequency.get()
+    bandwidthvar = bandwidth.get()
+    channelsvar = channels.get()
+    t_samplevar = t_sample.get()
+    rf_gainvar = rf_gain.get()
+    if_gainvar = if_gain.get()
+    bb_gainvar = bb_gain.get()
     dev_argsvar = dev_args.get()
     cal_filevar = cal_file.get()
     print(t_samplevar, bandwidthvar)
@@ -52,14 +52,14 @@ def onPlay():
         # Define observation parameters
     observation = {
         'dev_args': dev_argsvar,
-        'rf_gain': rf_gainvar,
-        'if_gain': if_gainvar,
-        'bb_gain': bb_gainvar,
-        'frequency': frequencyvar,
-        'bandwidth': bandwidthvar,
-        'channels': channelsvar,
-        't_sample': t_samplevar,
-        'duration': durationvar
+        'rf_gain': float(rf_gainvar),
+        'if_gain': float(if_gainvar),
+        'bb_gain': float(bb_gainvar),
+        'frequency': float(frequencyvar),
+        'bandwidth': float(bandwidthvar),
+        'channels': int(channelsvar),
+        't_sample': float(t_samplevar),
+        'duration': float(durationvar)
     }
 
     # Data acquisition
