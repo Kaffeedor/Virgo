@@ -8,15 +8,16 @@ while 1:
 
 def onPlay():
     durationvar = duration.get()
-    frequencyvar = frequency.get()
-    bandwidthvar = bandwidth.get()
-    channelsvar = channels.get()
-    t_samplevar = t_sample.get()
-    rf_gainvar = rf_gain.get()
-    if_gainvar = if_gain.get()
-    bb_gainvar = bb_gain.get()
+    frequencyvar = float(frequency.get())
+    bandwidthvar = float(bandwidth.get())
+    channelsvar = int(channels.get())
+    t_samplevar = float(t_sample.get())
+    rf_gainvar = float(rf_gain.get())
+    if_gainvar = float(if_gain.get())
+    bb_gainvar = float(bb_gain.get())
     dev_argsvar = dev_args.get()
     cal_filevar = cal_file.get()
+    print(t_samplevar, bandwidthvar)
 
     if durationvar == "":
         durationvar=60
@@ -26,13 +27,13 @@ def onPlay():
             float(symbol)
         except:
             if symbol=="s":
-                pass
+                durationvar=float(durationvar)
             elif symbol=="m":
-                durationvar=durationvar*60
+                durationvar=float(durationvar)*60
             elif symbol=="h":
-                durationvar=durationvar*60*60
+                durationvar=float(durationvar)*60*60
             elif symbol=="d":
-                durationvar=durationvar*60*60*24
+                durationvar=float(durationvar)*60*60*24
     if frequencyvar == "":
         frequencyvar=1420e6
     if bandwidthvar == "":
