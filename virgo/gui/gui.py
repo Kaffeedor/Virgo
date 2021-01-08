@@ -1,4 +1,4 @@
-    import virgo
+import virgo
 import tkinter as tk
 
 while 1:
